@@ -1,0 +1,535 @@
+:root {
+    --primary-font : 'Zodiak', serif;
+    --secondary-font: 'Satoshi', sans-serif;
+    --text-color: rgb(255, 229, 212);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--secondary-font);
+}
+*::selection {
+    background-color : #ac6620;
+    color: #f1f1f1;
+}
+body {
+    min-height: 100vh;
+    background-color: #32332d;
+    color: rgb(255, 229, 212);
+    position: relative;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    top: 0;
+    transition: background-color .4s ease-in-out;
+    z-index: 2;
+    position: sticky;
+}
+.header-scrolled {
+    background-color: #32332d;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75%;
+}
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+.logo {
+    padding-left: 5px;
+}
+nav li {
+    height: 50px;
+}
+nav a {
+    height: 100%;
+    padding: 0 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    position: relative;
+    margin: 0;
+}
+nav a:hover {
+    color: #f1f1f1;
+    transition: 100ms linear;
+}
+.nav-items a::after {
+ content: "";
+ position: absolute;
+ background-color: #ac6620;
+ height: 4px;
+ width: 0;
+ left: 20%;
+ bottom: -5px;
+ transition: 0.5s;
+}
+.nav-items a:hover:after{
+    width: 60%;
+}
+#special-item {
+    border: var(--text-color) 0.5px solid;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: 300ms ease-in-out;
+}
+#special-item:hover {
+    background: #ac6620;
+}
+/* ==============================  BODY  ====================================== */
+.container {
+    overflow-y: scroll;
+    width: 100vw;
+}
+.img-holder {
+    position: absolute;
+    top: 0;
+    right: -0.3%;
+    background-image: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-slider-pic1.webp");
+    height: 100vh;
+    width: 62%;
+    border-radius: 0 0 0 100px;
+    z-index: -2;
+    animation: change 20s infinite linear;
+}
+.dashed-rectangle {
+    position: absolute;
+    top: 16%;
+    height: 62vh;
+    width: 30%;
+    left: 25%;
+    border: #ac6620 dashed 1px;
+    border-radius: 60px;
+    z-index: -5;
+}
+@keyframes change {
+    from {
+        background-image: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-slider-pic1.webp");
+    }
+    33%
+    {
+        background-image: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-slider-pic2.webp");
+    }
+    66%
+    {
+        background-image: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-slider-pic3.webp");
+    }
+    to 
+    {
+        background-image: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-slider-pic1.webp");
+    }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: cover;
+    background-color: black;
+    opacity: 0.1;
+    z-index: -1;
+}
+h1, button{   
+    all: unset;
+}
+.head {
+    all: unset;
+    font-family: 'Zodiak', serif;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 38px;
+}
+.head-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 100;
+    left: 31%;
+    top: 20vh;
+    font-size: 36px;
+}
+.head-2, .head-3 {
+    font-weight: 300;
+    font-size: 170px;
+}
+.head-2 {
+    top: 28vh;
+    left: 18%;
+}
+.head-3 {
+    top: 45vh;
+    left: 6%;
+}
+.head-4 {
+    top: 66vh;
+    left: 28%;
+    font-weight: 100;
+}
+.head-5 {
+    text-transform: capitalize;
+    top: 50vh;
+    left: 39%;
+}
+.num-container {
+    position: absolute;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 82vh;
+    left: 4vw;
+    font-size: 15px;
+}
+.num-click {
+    padding: 30px 40px;
+    color: #ac6620;
+    border-bottom: 1px solid #ac6620;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+.num-click:hover {
+    color: #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+.btn {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 6px;
+    font-size: 18px;
+    padding: 18px 85px;
+    border-radius: 25px;
+}
+.btn-1 {
+    color: #ac6620;
+    background-color: var(--text-color);
+    bottom: 10vh;
+    right: 4vw;
+}
+.container-1 {
+    position: absolute;
+    height: 150vh;
+    width: 100vw;
+    top: 100vh;
+    z-index: -2;
+}
+.rot-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -130px;
+}
+.rotating-logo {
+    content: url("data:image/svg+xml,%3Csvg%20id%3D%22eknVsZ9wLr21%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20viewBox%3D%220%200%20120%20120%22%20shape-rendering%3D%22geometricPrecision%22%20text-rendering%3D%22geometricPrecision%22%3E%3Cstyle%3E%3C!%5BCDATA%5B%23eknVsZ9wLr22_tr%20%7Banimation%3A%20eknVsZ9wLr22_tr__tr%2020000ms%20linear%20infinite%20normal%20forwards%7D%40keyframes%20eknVsZ9wLr22_tr__tr%20%7B%200%25%20%7Btransform%3A%20translate(59.999548px%2C60.011225px)%20rotate(0deg)%7D%20100%25%20%7Btransform%3A%20translate(59.999548px%2C60.011225px)%20rotate(-360deg)%7D%7D%5D%5D%3E%3C%2Fstyle%3E%3Cg%20id%3D%22eknVsZ9wLr22_tr%22%20transform%3D%22translate(59.999548%2C60.011225)%20rotate(0)%22%3E%3Cg%20transform%3D%22translate(-59.999548%2C-60.011225)%22%3E%3Cpath%20d%3D%22M42.29%2C13.26c-.43-.03-.8-.15-1.12-.38-.32-.22-.56-.54-.71-.94l1.43-.51c.12.27.29.45.52.55s.5.09.8-.02c.31-.11.53-.27.66-.48.12-.21.15-.44.06-.68-.07-.2-.19-.34-.35-.42-.17-.08-.35-.13-.56-.14-.21%2C0-.49%2C0-.83.02-.48.03-.87.02-1.19%2C0-.31-.03-.61-.13-.89-.32s-.5-.48-.65-.9c-.14-.39-.16-.77-.07-1.13s.29-.68.59-.97c.3-.28.68-.5%2C1.14-.66.69-.24%2C1.3-.27%2C1.85-.09s.95.56%2C1.2%2C1.15l-1.47.52c-.09-.22-.26-.38-.49-.46s-.5-.08-.8.03c-.26.09-.45.23-.55.42-.11.19-.12.41-.03.66.06.18.17.31.33.38s.34.12.54.13.48%2C0%2C.83%2C0c.48-.03.88-.02%2C1.19%2C0c.32.03.62.14.91.32s.5.48.65.9c.13.36.15.72.07%2C1.09s-.26.71-.55%2C1.02-.68.55-1.17.72c-.46.16-.91.23-1.34.2Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M33.01%2C11.3l.85%2C1.55l2.09-1.14.54.99-2.09%2C1.14.9%2C1.64l2.35-1.28.55%2C1.01-3.6%2C1.96-3.38-6.21L34.82%2C9l.55%2C1.01-2.35%2C1.28Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M31.61%2C19.05l-1.11.88-5.52-1.81l3.01%2C3.8-1.11.88-4.39-5.54l1.11-.88l5.53%2C1.82-3.01-3.81l1.11-.88l4.39%2C5.54Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M19.22%2C20.49l5.14%2C4.84-.97%2C1.03-5.14-4.84.97-1.03Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M18.75%2C31.92c-.37.22-.75.33-1.14.34s-.76-.12-1.12-.37l.88-1.23c.25.15.49.2.74.15.24-.05.46-.21.65-.47.19-.27.28-.53.26-.77s-.13-.44-.34-.59c-.17-.12-.35-.17-.53-.14s-.36.09-.54.2-.4.28-.67.49c-.38.29-.7.52-.98.68s-.58.24-.92.25-.69-.11-1.05-.37c-.34-.24-.57-.54-.71-.89-.13-.35-.15-.73-.07-1.13.09-.4.27-.8.55-1.2.42-.59.91-.97%2C1.47-1.13.55-.16%2C1.1-.08%2C1.64.25l-.91%2C1.27c-.21-.13-.43-.16-.67-.1s-.45.22-.64.48c-.16.22-.23.45-.21.66.02.22.14.4.36.56.15.11.32.15.49.12s.35-.1.52-.2c.17-.11.4-.27.67-.48.38-.29.7-.52.98-.68s.59-.24.93-.25.69.11%2C1.05.36c.31.22.53.5.68.85s.19.73.13%2C1.15-.25.84-.55%2C1.26c-.29.4-.61.71-.98.93Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M8.22%2C36.7l3.94%2C1.89c.43.21.82.25%2C1.15.14.34-.12.6-.38.8-.78.2-.41.24-.79.12-1.12s-.4-.6-.83-.81L9.46%2C34.13l.62-1.29l3.93%2C1.89c.54.26.94.6%2C1.2%2C1.01s.39.86.39%2C1.34-.11.96-.35%2C1.44c-.23.47-.53.86-.9%2C1.15-.37.3-.8.47-1.28.51-.48.05-.99-.06-1.53-.32L7.61%2C37.97l.61-1.28Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M9.82%2C43.65c.38-.16.77-.19%2C1.17-.08.36.1.66.28.89.53s.37.57.44.95c.06.38.03.8-.09%2C1.26l-.8%2C2.94-6.81-1.87.77-2.81c.13-.46.31-.84.55-1.13s.52-.49.83-.59.64-.1.98%2C0c.4.11.7.31.91.59s.32.62.33%2C1c.18-.36.46-.63.83-.79ZM7.79%2C46.8l.34-1.25c.09-.33.08-.6-.01-.81-.1-.22-.28-.36-.56-.44-.27-.07-.51-.04-.71.09s-.34.36-.43.69l-.34%2C1.25l1.71.47Zm3.24-1.42c-.11-.23-.3-.38-.59-.46s-.55-.05-.77.1-.37.39-.47.72l-.37%2C1.35l1.83.5.38-1.38c.09-.33.08-.61-.02-.84Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M3.32%2C56.66l4.56%2C2.46l2.46.04-.02%2C1.42-2.46-.04-4.64%2C2.32.03-1.6L6.5%2C59.8L3.3%2C58.24l.03-1.58Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M9.82%2C67.91l-.35-2.3l1.11-.17.56%2C3.7L4.16%2C70.2l-.21-1.4l5.87-.89Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M5.15%2C74.55l6.8-1.89.38%2C1.36-6.8%2C1.89-.38-1.36Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M6.91%2C80.41l6.4-2.97.6%2C1.28-4.16%2C1.93l4.96-.22.45.97-3.36%2C3.66l4.16-1.93.6%2C1.28-6.4%2C2.97-.68-1.46l3.82-4.25-5.71.17-.67-1.45Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M18.24%2C89.37l1.68%2C2.26l1.36-.43.89%2C1.19-7.19%2C2.19L14%2C93.26L18.15%2C87l.89%2C1.2-.8%2C1.18Zm-.68.98L15.8%2C92.93l2.98-.94-1.22-1.64Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M19.12%2C99.45l.79-.83l2.13%2C2.03l1.25-1.31-1.63-1.56.78-.81l1.63%2C1.56l2.06-2.16l1.02.98-4.88%2C5.1-3.15-3.01Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M29.95%2C108.26l.56-1l1.64.93l2.91-5.15l1.23.7-2.91%2C5.15l1.64.93-.56%2C1-4.51-2.55Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M41.16%2C112.4l.62-1.66-2.23-.83.39-1.05l2.23.83.66-1.75-2.51-.94.4-1.08l3.84%2C1.43-2.48%2C6.62-3.84-1.44.4-1.08l2.51.94Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M49.23%2C108.61l1.92%2C3.58.6-3.09l1.39.27-1.35%2C6.93-1.39-.27.61-3.11-3.13%2C2.61-1.68-.33l3.53-2.88-2.26-4.07l1.76.34Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M58.09%2C109.77l1.51%2C2.78h.67l.05-2.74l1.42.03-.13%2C7.06-2.65-.05c-.55%2C0-1.01-.11-1.39-.31s-.66-.46-.85-.79-.28-.7-.27-1.1c0-.47.15-.88.43-1.25s.68-.62%2C1.22-.75l-1.64-2.89l1.64.03Zm2.15%2C3.85l-1.18-.02c-.38%2C0-.67.08-.86.26s-.29.44-.3.77c0%2C.32.08.58.27.76s.47.28.85.28l1.18.02.04-2.07Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M66.93%2C110.71l2.78-.45.25-1.4l1.47-.24L70.05%2C116l-1.63.26-3.63-6.58l1.48-.24.67%2C1.25Zm.56%2C1.06l1.48%2C2.75.54-3.08-2.02.32Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M76.91%2C114.47l-2.53-6.59l1.32-.51l1.65%2C4.29.12-4.96l1-.38l3.42%2C3.61-1.65-4.29l1.32-.51l2.53%2C6.59-1.5.58-3.98-4.1-.22%2C5.71-1.49.57Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M94.21%2C104.09l-1.07-1.41-1.89%2C1.44-.68-.9l1.89-1.43-1.13-1.49-2.14%2C1.62-.7-.92l3.27-2.47l4.27%2C5.64-3.27%2C2.47-.7-.92l2.14-1.62Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M99.57%2C101.06l-5.14-4.83.97-1.03l2.19%2C2.06l2.07-2.2L97.47%2C93l.97-1.03l5.14%2C4.83-.97%2C1.03-2.11-1.99-2.07%2C2.2l2.12%2C1.99-.97%2C1.03Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M106.27%2C93.34l-.96-.63l1.03-1.57-4.94-3.25.78-1.18l4.94%2C3.25l1.03-1.57.96.63-2.84%2C4.33Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M106.64%2C78.11l.43-1.35l5.59-1.57-4.61-1.48.43-1.35l6.73%2C2.16-.43%2C1.35-5.6%2C1.57l4.62%2C1.48-.43%2C1.35-6.73-2.16Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M110.21%2C63.97c.37-.51.85-.9%2C1.43-1.16s1.22-.35%2C1.91-.27c.68.08%2C1.28.31%2C1.79.69s.89.87%2C1.13%2C1.45.33%2C1.21.25%2C1.86c-.08.66-.3%2C1.25-.67%2C1.76s-.85.89-1.43%2C1.15-1.21.34-1.9.27c-.69-.08-1.29-.31-1.8-.69s-.89-.86-1.13-1.45-.33-1.21-.25-1.86c.08-.66.3-1.24.67-1.76Zm.74%2C3.05c.15.34.4.63.73.85s.74.36%2C1.2.41c.47.05.89.01%2C1.26-.13s.67-.36.9-.66c.22-.3.36-.66.41-1.08s0-.81-.15-1.15c-.15-.35-.39-.63-.72-.85s-.73-.36-1.2-.41-.89-.01-1.27.13-.68.36-.91.66-.37.67-.42%2C1.09s0%2C.8.16%2C1.15Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M115.49%2C51.56c.11-.19.14-.43.09-.74-.08-.46-.32-.77-.72-.92-.41-.16-1.02-.17-1.86-.04.29.12.54.31.74.6s.33.6.39.96c.07.43.04.83-.09%2C1.19s-.36.67-.68.91c-.33.24-.74.41-1.24.49-.47.08-.91.05-1.31-.08s-.73-.36-1-.69-.44-.75-.53-1.26c-.11-.69-.05-1.26.19-1.71s.62-.79%2C1.15-1.04c.52-.25%2C1.19-.44%2C1.99-.57c1.22-.2%2C2.17-.14%2C2.86.17.69.32%2C1.11.93%2C1.26%2C1.83.12.7.02%2C1.27-.3%2C1.72s-.75.75-1.31.9l-.21-1.3c.27-.11.46-.26.57-.45Zm-3.01-1.11c-.25-.21-.56-.28-.96-.21s-.68.23-.87.49-.25.59-.18%2C1c.06.36.22.63.47.8s.57.23.94.17c.39-.06.67-.22.87-.46.19-.24.26-.56.19-.95-.06-.35-.21-.63-.46-.84Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M114.04%2C44.2l-6.83-.51-.46-1.36l6.69.58-1.12-3.27l1.15-.39l1.57%2C4.61-1%2C.34Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M105.01%2C35.31c-.05.24%2C0%2C.51.16.79.2.37.49.55.89.56.4%2C0%2C.96-.19%2C1.68-.58-.26-.04-.52-.15-.75-.34-.24-.19-.44-.43-.59-.71-.2-.38-.31-.77-.31-1.16s.1-.76.32-1.1c.22-.35.55-.64.99-.88.66-.35%2C1.29-.44%2C1.89-.25.6.18%2C1.08.61%2C1.44%2C1.29.45.84.5%2C1.58.15%2C2.22s-1.08%2C1.25-2.16%2C1.83c-.77.41-1.44.69-2.01.82s-1.06.1-1.49-.08c-.43-.19-.79-.56-1.09-1.12-.24-.44-.35-.86-.35-1.26s.1-.76.29-1.07.44-.57.76-.77l.62%2C1.16c-.24.19-.38.4-.43.65Zm3.21.02c.29.08.59.03.91-.14.35-.19.57-.43.67-.72.09-.29.05-.6-.12-.92s-.41-.52-.71-.6-.61-.03-.94.14c-.32.17-.52.4-.63.68-.1.29-.06.61.14.98.17.31.39.5.68.58Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M104.27%2C25.69l1.05-.77l1.45%2C1.96-5.94%2C4.37-.86-1.17l4.89-3.6-.58-.79Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M95.94%2C17.29l-1.15%2C1.34l1.8%2C1.55-.73.85-1.8-1.55-1.22%2C1.42l2.04%2C1.74-.75.88-3.11-2.67l4.6-5.37l3.11%2C2.67-.75.88-2.04-1.74Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M85.6%2C10.89c.55-.31%2C1.14-.46%2C1.76-.45s1.23.19%2C1.81.53c.68.4%2C1.17.93%2C1.47%2C1.58s.38%2C1.34.21%2C2.08l-1.4-.83c.03-.37-.03-.71-.2-1s-.42-.54-.75-.74c-.35-.21-.72-.31-1.09-.31s-.73.11-1.06.32-.62.52-.86.93c-.24.4-.37.8-.4%2C1.19-.03.4.05.76.23%2C1.09s.44.6.8.81c.33.2.67.29%2C1.01.3s.67-.1.98-.31l1.4.83c-.57.5-1.21.77-1.92.82-.71.04-1.41-.14-2.1-.54-.58-.34-1.03-.79-1.34-1.33s-.46-1.13-.45-1.76c0-.63.19-1.24.54-1.84s.81-1.05%2C1.36-1.37Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M79.57%2C14.02l-1.34-.47-1.41-5.64-1.61%2C4.57-1.33-.47l2.35-6.67l1.33.47l1.41%2C5.65l1.62-4.58l1.33.47-2.35%2C6.67Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M71.76%2C4.31l-1.35%2C6.93-1.39-.27l1.35-6.93l1.39.27Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M61.83%2C10.01c-.38-.19-.68-.45-.89-.78s-.31-.71-.29-1.14l1.51.09c0%2C.29.09.53.27.7.18.18.42.28.75.3s.59-.04.79-.19.3-.35.32-.6c.01-.21-.04-.38-.16-.53-.12-.14-.27-.26-.46-.35s-.45-.19-.78-.3c-.45-.16-.81-.32-1.09-.46-.28-.15-.51-.36-.7-.64s-.27-.64-.25-1.08c.02-.42.15-.77.38-1.07s.53-.52.92-.66.82-.2%2C1.31-.17c.73.04%2C1.31.25%2C1.74.63s.66.89.67%2C1.52l-1.56-.09c0-.24-.09-.45-.27-.62s-.43-.26-.75-.28c-.28-.02-.5.04-.67.17s-.27.33-.28.6c-.01.19.04.35.16.48s.27.24.45.33.44.19.77.31c.45.16.82.32%2C1.1.47s.52.37.71.65.28.64.25%2C1.08c-.02.38-.14.72-.35%2C1.03s-.52.55-.9.72c-.39.17-.84.24-1.36.21-.49-.03-.93-.14-1.31-.33Z%22%20fill%3D%22%23ac6620%22%2F%3E%3Cpath%20d%3D%22M50.28%2C10.95c-.42-.1-.77-.28-1.05-.56-.28-.27-.46-.62-.54-1.05l1.49-.26c.07.28.21.49.42.62s.48.17.8.12c.33-.06.57-.18.73-.37s.22-.41.17-.66c-.04-.21-.13-.36-.28-.48-.15-.11-.33-.19-.53-.23s-.48-.08-.83-.12c-.47-.05-.86-.12-1.17-.2s-.58-.23-.83-.46-.41-.56-.49-1c-.07-.41-.03-.79.12-1.13s.4-.63.75-.85c.34-.23.75-.38%2C1.23-.47.72-.12%2C1.33-.05%2C1.84.22s.84.71%2C1%2C1.33l-1.53.27c-.05-.24-.19-.42-.41-.54s-.48-.16-.79-.1c-.27.05-.48.15-.62.32s-.18.38-.14.65c.03.19.12.33.26.43s.31.17.51.22c.2.04.47.09.82.13.47.05.87.12%2C1.18.21s.59.24.84.47.42.56.49.99c.06.37.03.73-.11%2C1.09-.14.35-.38.66-.71.91-.34.25-.76.42-1.28.51-.48.08-.94.08-1.35-.02Z%22%20fill%3D%22%23ac6620%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Ccircle%20r%3D%228.14%22%20transform%3D%22translate(45.68%2042.72)%22%20fill%3D%22none%22%20stroke%3D%22%23ac6620%22%20stroke-miterlimit%3D%2210%22%2F%3E%3Cpath%20d%3D%22M60.13%2C84.95c-20.45%2C0-28.9-10.88-28.9-21.66c0-8.46%2C6.52-12.44%2C14.04-12.44c2.84%2C0%2C5.49.74%2C7.7%2C2.01%22%20fill%3D%22none%22%20stroke%3D%22%23ac6620%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fg%3E%3Cg%3E%3Ccircle%20r%3D%228.14%22%20transform%3D%22translate(74.59%2042.72)%22%20fill%3D%22none%22%20stroke%3D%22%23ac6620%22%20stroke-miterlimit%3D%2210%22%2F%3E%3Cpath%20d%3D%22M60.13%2C84.95c20.45%2C0%2C28.9-10.88%2C28.9-21.66c0-8.46-6.52-12.44-14.04-12.44-2.84%2C0-5.49.74-7.7%2C2.01%22%20fill%3D%22none%22%20stroke%3D%22%23ac6620%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fg%3E%3Cg%3E%3Ccircle%20r%3D%227.23%22%20transform%3D%22translate(60.13%2055.94)%22%20fill%3D%22none%22%20stroke%3D%22%23ac6620%22%20stroke-miterlimit%3D%2210%22%2F%3E%3Cpath%20d%3D%22M47.64%2C83.28v-9.22c0-6.01%2C5.59-10.89%2C12.49-10.89s12.49%2C4.88%2C12.49%2C10.89v9.22%22%20fill%3D%22none%22%20stroke%3D%22%23ac6620%22%20stroke-miterlimit%3D%2210%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    height: 260px;
+}
+text-container {
+    padding: 0 35vw;
+    width: 100%;
+    height: 350px;
+}
+.cool-text-base {
+    font-weight: 500;
+    color: #ac6620;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+.cool-text {
+    padding: 0 47.3vw;
+}
+.cool-head-base {
+    font-family: var(--primary-font);
+    font-size: 50px;
+    margin-top: 35px;
+}
+.cool-head{
+    text-align: center;
+}
+.white-space {
+    height: 100%;
+    width: 35%;
+}
+.cool-head-container {
+    height: 100%;
+    width: auto;
+}
+u {
+    all: unset;
+}
+.underlined-text {
+    text-decoration: underline;
+    text-decoration-color: #ac6620;
+}
+.count-container {
+    display: flex;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    margin: 13vh 0;
+    padding: 0 15vw;
+}
+.dashed-containers {
+    height: 100%;
+    width: 12vw;
+    border: 1px dashed #ac6620;
+    border-radius: 50px;
+    margin: 0 3vw;
+    text-align: center;
+}
+.cool-num {
+    font-size: 80px;
+    margin: 35px 0;
+}
+.cool-text-1 {
+    color: #ac6620;
+}
+.container-2 {
+    background-color: #312825;
+    position: absolute;
+    height: 340vh;
+    width: 100%;
+    top: 250vh;
+}
+.video-container {
+    height: 90vh;
+    width: 80vw;
+    position: inherit;
+    content: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-video-overlay.webp");
+    margin: 0 10vw;
+    border-radius: 50px;
+    top: -40vh;
+}
+.image-overlay {
+    content: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-home-pic1.webp");
+    position: absolute;
+    height: 120vh; 
+    right: 0;
+    top: 80vh;
+}
+.cool-text-container{
+    position: inherit;
+    top: 105vh;
+    left: 120px;
+}
+.gen-text {
+    margin-top: 40px;
+    line-height: 30px;
+}
+.btn-2 {
+    margin-top: 55px;
+    background-color: #ac6620;
+}
+.text-container-1 {
+    position: inherit;
+    top: 220vh;
+    width: 100%;
+    text-align: center;
+}
+.blog-post-container {
+    position: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 250vh;
+    padding: 0 10vw;
+}
+.blog-post-item {
+    padding: 0 1vw;
+}
+.blog-post-image {
+    height: 300px;
+    border-radius: 50px;
+}
+.blog-post-title {
+    padding: 24px 28px;
+    font-size: 26px;
+    font-weight: 500;
+}
+.blog-post-hr {
+    margin: 0 28px;
+    color: #614e3b;
+}
+.writer-date-container {
+    padding: 15px 28px;
+    display: flex;
+}
+.admin-text {
+    color: #ac6620;
+}
+.writer-date {
+    padding-left: 5px;
+    margin-top: 5px;
+    padding-right: 25px;
+}
+.material-symbols-outlined {
+    margin-top: 5px;
+}
+.btn-3 {
+    border: 2px var(--text-color) solid;
+    position: inherit;
+    top: 315vh;
+    left: 40vw;
+}
+.container-3 {
+    position: absolute;
+    top: 590vh;
+    width: 100%;
+    height: 230vh;
+    background-color: #27211f;
+}
+.text-overlay {
+    position: inherit;
+    width: 100%;
+    content: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-text-bar-animated.svg");
+    z-index: 2;
+    bottom: 0;
+}
+.rectangle-decoration {
+    position: inherit;
+    height: 100px;
+    width: 100px;
+    background-color: #27211f;
+    transform: rotate(45deg);
+    top: -20px;
+    left: 46.5%;
+}
+.cool-text-container-1 {
+    position: inherit;
+    top: 15vh;
+    width: 100%;
+    text-align: center;
+}
+.cool-text-2 {
+    text-align: center;
+}
+.dashed-content-holder {
+    position: inherit;
+    top: 35vh;
+    width: 100%;
+    height: 48vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 21vw;
+}
+.dashed-containers-1 {
+    height: 100%;
+    width: 350px;
+    border: 1px #ac6620 dashed;
+    border-radius: 50px;
+}
+.agent-pic {
+    border-radius: 100%;
+    height: 60%;
+    margin: 30px 40px;
+}
+.agent-name {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+}
+.btn-4 {
+    position: inherit;
+    border: 2px var(--text-color) solid;
+    top: 90vh;
+    left: 42vw;
+}
+.background-image {
+    position: inherit;
+    top: 110vh;
+}
+.contact-container {
+    position: inherit;
+    height: 50vh;
+    background-color: #201d1b;
+    border-radius: 50px;
+    width: 38vw;
+    right: 18vw;
+    top: 130vh;
+}
+.contact-container {
+    position: inherit;
+    height: 50vh;
+    background-color: #271d1b;
+    border-radius: 50px;
+    width: 38vw;
+    right: 18vw;
+    top: 130vh;
+}
+.contact-text {
+    font-size: 32px;
+    text-align: center;
+    margin: 14vh 0 6vh 0;
+}
+.btn-contact {
+    background-color: #ac6620;
+    margin: 0 10vw;
+}
+.footer {
+    position: absolute;
+    top: 820vh;
+    background-color: #32332d;
+    height: 75vh;
+    width: 100%;
+}
+.footer-container {
+    height: 80%;
+    width: 60%;
+    margin: 15vh 20vw;
+}
+.footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-media-links {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-link-container {
+    height: 70%;
+    width: 100%;
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links {
+    height: 35vh;
+    width: 22.2%;
+}
+.footer-link-head {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4vh;
+}
+.footer-link-content {
+    line-height: 40px;
+}
+.footer-link-content-a {
+    line-height: 55px;
+}
+a {
+    all: unset;
+}
+.footer-links-a:hover {
+    color: #ac6620;
+    transition: 100ms linear;
+}
+.footer-contact {
+    text-align: right;
+}

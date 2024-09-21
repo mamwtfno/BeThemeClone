@@ -14,10 +14,9 @@
     color: #f1f1f1;
 }
 body {
-    min-height: 100vh;
+    min-height: 900vh;
     background-color: #32332d;
     color: rgb(255, 229, 212);
-    position: relative;
     overflow-x: hidden;
 }
 body::-webkit-scrollbar {
@@ -394,7 +393,6 @@ u {
     position: inherit;
     width: 100%;
     content: url("https://themes.muffingroup.com/be/estate4/wp-content/uploads/2022/10/estate4-text-bar-animated.svg");
-    z-index: 2;
     bottom: 0;
 }
 .rectangle-decoration {
